@@ -20,7 +20,9 @@
 
 
     <!-- 快捷按钮 -->
-    <button style="color: #b4b4b4;" id="toggle-button" onclick="toggleButtons()">隐藏内容</button>
+    <center>
+        <button style="color: #b4b4b4; background-color: rgba(54, 54, 54, 0.493); width: 400px; border-radius: 10px; " id="toggle-button" onclick="toggleButtons()">隐藏内容</button>
+    </center>
     <div class="button-container" id="button-container">
         <h style="color: rgb(214, 214, 214);">您可能对这些话题感兴趣: </h>
         <button style="background-color: #202020c3; color: white;" onclick="quickReply(this, '开启搜索功能')">搜索功能</button>
@@ -39,11 +41,15 @@
     <div class="input-container">
         <input type="text" id="user-input" placeholder="请输入...">
         <button onclick="sendMessage()">➤ </button>
+        <center>
         <button id="huoshisoundaudio-button" onclick="toggleVoiceInput()">🎤</button>
         <button id="huoshisoundaudio-stop-button" onclick="stopVoiceInput()" style="display: none;">停止录音</button>
         <button id="speak-button" onclick="speakMessage()">语音</button>
         <button id="stop-voice-button" onclick="stopSpeaking()" style="display: none;">语音阅读中</button>
+    </center>
     </div>
+
+
     <center>
         <p style="color: #b4b4b4;">火狮 桃星 HUOSHI © 2025 </p>
 
