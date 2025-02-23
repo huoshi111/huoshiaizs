@@ -19,6 +19,11 @@
             flex-direction: column;
             height: 80vh; /* 固定高度 */
         }
+        /*聊天窗口滚动条设置*/
+
+
+
+        /*聊天窗口滚动条设置结束*/
         .chat-box {
             flex: 1;
             padding: 20px;
@@ -29,15 +34,23 @@
             scrollbar-color: #888 #f4f4f4;
         }
         .chat-box::-webkit-scrollbar {
+            border-radius: 50px;
+            background-color: grey;
             width: 6px; /* 滚动条宽度 */
         }
         .chat-box::-webkit-scrollbar-track {
-            background: #f4f4f4;
+            background: #c5c5c5;
         }
         .chat-box::-webkit-scrollbar-thumb {
-            background: #b4b4b4;
-            border-radius: 3px;
+            background: #6c6c6c;
+            border-radius: 10px;
         }
+        
+
+
+
+
+
         .chat-box p {
             margin: 5px 0;
             padding: 8px 12px;
@@ -80,13 +93,41 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            padding: 10px;
+            gap: 6px;
+            padding: 5px;
             background: #6e6e6e;
             transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out; 
-            max-height: 200px; /* 初始最大高度 */
-            overflow: hidden;
+            max-height: 300px; /* 初始最大高度 */
+            overflow-y: auto; /* 允许垂直滚动 */
         }
+
+        /*按钮内容的滚动条设置*/
+
+        .button-container::-webkit-scrollbar {
+            width: 8px; /* 滚动条宽度 */
+            background-color: rgb(147, 147, 147);
+            border-radius: 10px; /* 给滚动条本身加圆角 */
+          }
+
+          /* 滚动条轨道 */
+.button-container::-webkit-scrollbar-track {
+    background: #c5c5c5; /* 轨道背景色 */
+    border-radius: 10px; /* 轨道圆角 */
+  }
+  
+  /* 滚动条滑块（可拖动的部分） */
+  .button-container::-webkit-scrollbar-thumb {
+    background: #4e4e4e; /* 滑块颜色（这里是橙红色） */
+    border-radius: 10px; /* 滑块圆角 */
+  }
+  
+  /* 滑块在悬停时的颜色 */
+  .button-container::-webkit-scrollbar-thumb:hover {
+    background: #909090; /* 深一点的橙色 */
+  }
+
+
+/*滚动条设置结束*/
 
         .button-container.hidden {
             opacity: 0;
@@ -117,10 +158,19 @@
         input {
             flex: 1;
             padding: 8px;
-            border: 1px solid #ccccccad;
-            border-radius: 5px;
+            color: rgba(212, 212, 212, 0.96);
+            border: 1px solid #9f9f9fc7;
+            background-color: #6b6b6bba;
+            border-radius: 10px;
             outline: none;
+            max-width: 600px;
         }
+
+        input::placeholder {
+            color: rgb(217, 217, 217); /* 修改占位符的颜色 */
+          }
+
+
         button {
             margin-left: 10px;
             padding: 8px 12px;
